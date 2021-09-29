@@ -1,0 +1,11 @@
+Nstep: 800
+Rcore: 6e-09
+Tshell: 5e-09
+Nside_X: 13
+Nside_Y: 15
+Nside_Z: 16
+iSeed: 13
+dMoment: 3e-19
+kA: 30000
+Tmax: 400
+Tmin: 150

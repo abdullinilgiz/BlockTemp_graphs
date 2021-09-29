@@ -1,0 +1,9 @@
+Nstep: 3000
+Rcore: 6e-09
+Tshell: 5e-09
+Nside: 13
+iSeed: 13
+dMoment: 3e-19
+kA: 30000
+Tmax: 350
+Tmin: 150
