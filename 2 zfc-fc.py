@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-date = '24.09.21'
+date = '28.09.21'
 filename = 'txtdata/' + date + '_old_kA=30000_FC.txt'
 data = np.loadtxt(filename, delimiter=' ')
 
@@ -83,25 +83,25 @@ plt.ylabel(r"$M, A/m^2$")
 plt.title(r"$T_{shell} = 5 нм, k_{A} = 30k$")
 plt.show()
 
-outF = open("fcX_fcY " + date + ".txt", "w")
-outF.write('FC Nstep = 1600\n')
-for i in range(len(fcX)):
-    if fcX[i] == 250 or fcX[i] == 150 or fcX[i] == 350:
-        outF.write(str(fcX[i]) + ' ' + str(fcY[i]))
-        outF.write("\n")
-outF.close()
-
-outF = open("zfcX_zfcY " + date + ".txt", "w")
-outF.write('ZFC Nstep = 1600\n')
-for i in range(len(zfcX)):
-    if zfcX[i] == 250 or zfcX[i] == 150 or zfcX[i] == 350:
-        outF.write(str(zfcX[i]) + ' ' + str(zfcY[i]))
-        outF.write("\n")
-outF.close()
-
-
-print('fc')
-print(fcX, fcY)
-print('zfc')
-print(zfcX, zfcY)
+# outF = open("fcX_fcY " + date + ".txt", "w")
+# outF.write('FC Nstep = 1600\n')
+# for i in range(len(fcX)):
+#     if fcX[i] == 250 or fcX[i] == 150 or fcX[i] == 350:
+#         outF.write(str(fcX[i]) + ' ' + str(fcY[i]))
+#         outF.write("\n")
+# outF.close()
+#
+# outF = open("zfcX_zfcY " + date + ".txt", "w")
+# outF.write('ZFC Nstep = 1600\n')
+# for i in range(len(zfcX)):
+#     if zfcX[i] == 250 or zfcX[i] == 150 or zfcX[i] == 350:
+#         outF.write(str(zfcX[i]) + ' ' + str(zfcY[i]))
+#         outF.write("\n")
+# outF.close()
+#
+#
+# print('fc')
+# print(fcX, fcY)
+# print('zfc')
+# print(zfcX, zfcY)
 

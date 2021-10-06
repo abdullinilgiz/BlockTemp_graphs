@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-filename = 'txtdata/28.09.21_kA=30000_ZFC_convergence.txt'
+filename = 'txtdata/05.10.21_kA=30000_ZFC_convergence.txt'
 data = np.loadtxt(filename, delimiter=' ')
 
 X = []
