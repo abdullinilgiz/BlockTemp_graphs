@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+
 filename = 'longcalc/26.10.21_kA=30000_ZFC_convergence.txt'
 data = np.loadtxt(filename, delimiter=' ')
 
@@ -17,12 +18,22 @@ for i in range(len(data)):
             else:
                 Y.append(data[i][j])
 
-ax = plt.axes(projection="3d")
+X_rev = []
+Y_rev = []
+for i in range(1+5000, 5000+5000):
 
-ax.scatter(X, Z, Y, s=0.1)
-plt.xlabel(r"$N_{step}$")
-plt.ylabel(r"$T, K$")
-ax.set_zlabel(r"$M, A^2/m^2$")
-plt.title("5nm")
+    if 1/X[i]**2 < 0.000001:
+        X_rev.append(1/X[i]**2)
+        Y_rev.append(Y[i])
 
+p, cov = np.polyfit(X_rev, Y_rev, 3, cov=True)
+print(p)
+print(np.sqrt(np.diag(cov)))
+
+plt.scatter(X_rev, Y_rev, s=0.1)
+plt.plot(X_rev, np.polyval(p, X_rev))
+plt.xlim([0, 0.000001])
 plt.show()
+print(np.polyval(p, 0))
+
+

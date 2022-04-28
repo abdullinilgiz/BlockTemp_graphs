@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-filename = 'txtdata/'
+filename = 'longcalc/26.10.21_kA=30000_FC.txt'
 data = np.loadtxt(filename, delimiter=' ')
 
 fcX = []
@@ -19,7 +19,7 @@ for i in range(len(data)):
                 if j == 5:
                     fcYer.append(data[i][j])
 
-filename = '20.09.21_kA=30000_ZFC.txt'
+filename = 'longcalc/26.10.21_kA=30000_ZFC.txt'
 data = np.loadtxt(filename, delimiter=' ')
 
 zfcX = []
@@ -41,5 +41,5 @@ plt.errorbar(fcX, fcY, fcYer)
 plt.errorbar(zfcX, zfcY, zfcYer)
 plt.xlabel(r"$T, K$")
 plt.ylabel(r"$M, A/m^2$")
-plt.title(r"$T_{shell} = 5 нм, k_{A} = 30k$ old positioning")
+plt.title(r"$T_{shell} = 5 нм, k_{A} = 30k$ hexagonal")
 plt.show()

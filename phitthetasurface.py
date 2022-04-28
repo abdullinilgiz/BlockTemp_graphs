@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-filename = "05.10.21_phitheta_FC150_index0.txt"
+filename = "txtdata/05.10.21_phitheta_FC150_index0.txt"
 data = np.loadtxt(filename, delimiter=' ')
 
 phi = []
