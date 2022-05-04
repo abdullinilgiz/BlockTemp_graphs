@@ -35,22 +35,16 @@ for i in range(len(data)):
                 else:
                     Zp.append(data[i][j])
 
-x_range = np.linspace(-15, 15, 10)
-y_range = np.linspace(-15, 15, 10)
-z_range = np.linspace(-15, 15, 10)
-Xmax = np.array([[max(Xp)-1 for i in range(0, 10)] for j in range(0, 10)])
-Ymax = np.array([[max(Yp)-1 for i in range(0, 10)] for j in range(0, 10)])
-Zmax = np.array([[max(Zp)-1 for i in range(0, 10)] for j in range(0, 10)])
-Xmin = np.array([[min(Xp)+1 for i in range(0, 10)] for j in range(0, 10)])
-Ymin = np.array([[min(Yp)+1 for i in range(0, 10)] for j in range(0, 10)])
-Zmin = np.array([[min(Zp)+1 for i in range(0, 10)] for j in range(0, 10)])
-
-# Xmax = [max(Xp), 0, 0]
-# Xmin = [min(Xp), 0, 0]
-# Ymax = [0, max(Yp), 0]
-# Ymin = [0, min(Yp), 0]
-# Zmax = [0, 0, max(Zp)]
-# Zmin = [0, 0, min(Zp)]
+radius = 11e-9
+Xmax = np.array([[max(Xp) - radius for i in range(0, 10)] for j in range(0, 10)])
+Ymax = np.array([[max(Yp) - radius for i in range(0, 10)] for j in range(0, 10)])
+Zmax = np.array([[max(Zp) - radius for i in range(0, 10)] for j in range(0, 10)])
+Xmin = np.array([[min(Xp) + radius for i in range(0, 10)] for j in range(0, 10)])
+Ymin = np.array([[min(Yp) + radius for i in range(0, 10)] for j in range(0, 10)])
+Zmin = np.array([[min(Zp) + radius for i in range(0, 10)] for j in range(0, 10)])
+x_range = np.linspace(min(Xp), max(Xp), 10)
+y_range = np.linspace(min(Yp), max(Yp), 10)
+z_range = np.linspace(min(Zp), max(Zp), 10)
 
 ax = plt.axes(projection="3d")
 
