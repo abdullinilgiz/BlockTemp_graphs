@@ -27,7 +27,7 @@ plt.title("28.09 5nm ZFC new")
 
 plt.show()
 
-filename = 'txtdata/28.09.21_kA=30000_FC_convergence.txt'
+filename = 'txtdata/27.09.21_kA=30000_FC_convergence.txt'
 data = np.loadtxt(filename, delimiter=' ')
 
 X = []
@@ -54,7 +54,7 @@ plt.title("28.09 5nm FC new")
 
 plt.show()
 
-filename = 'txtdata/28.09.21_old_kA=30000_ZFC_convergence.txt'
+filename = 'txtdata/27.09.21_old_kA=30000_ZFC_convergence.txt'
 data = np.loadtxt(filename, delimiter=' ')
 
 X = []
@@ -81,7 +81,7 @@ plt.title("28.09 5nm ZFC old")
 
 plt.show()
 
-filename = 'txtdata/28.09.21_old_kA=30000_FC_convergence.txt'
+filename = 'txtdata/27.09.21_old_kA=30000_FC_convergence.txt'
 data = np.loadtxt(filename, delimiter=' ')
 
 X = []

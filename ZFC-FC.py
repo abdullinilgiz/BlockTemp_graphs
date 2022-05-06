@@ -1,7 +1,8 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-filename = 'longcalc/26.10.21_kA=30000_FC.txt'
+today = "05.05.22_random"
+filename = 'txtdata/' + today + '_kA=30000_FC.txt'
 data = np.loadtxt(filename, delimiter=' ')
 
 fcX = []
@@ -19,7 +20,7 @@ for i in range(len(data)):
                 if j == 5:
                     fcYer.append(data[i][j])
 
-filename = 'longcalc/26.10.21_kA=30000_ZFC.txt'
+filename = 'txtdata/' + today + '_kA=30000_ZFC.txt'
 data = np.loadtxt(filename, delimiter=' ')
 
 zfcX = []

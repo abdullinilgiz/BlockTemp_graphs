@@ -73,11 +73,51 @@ for i in range(len(data)):
                 if j == 5:
                     zfcYer1.append(data[i][j])
 
+today = "05.05.22_random"
+filename = 'txtdata/' + today + '_kA=30000_FC.txt'
+data = np.loadtxt(filename, delimiter=' ')
+
+fcX2 = []
+fcY2 = []
+fcYer2 = []
+
+for i in range(len(data)):
+    for j in range(6):
+        if j == 0:
+            fcX2.append(data[i][j])
+        else:
+            if j == 4:
+                fcY2.append(data[i][j])
+            else:
+                if j == 5:
+                    fcYer2.append(data[i][j])
+
+filename = 'txtdata/' + today + '_kA=30000_ZFC.txt'
+data = np.loadtxt(filename, delimiter=' ')
+
+zfcX2 = []
+zfcY2 = []
+zfcYer2 = []
+
+for i in range(len(data)):
+    for j in range(6):
+        if j == 0:
+            zfcX2.append(data[i][j])
+        else:
+            if j == 4:
+                zfcY2.append(data[i][j])
+            else:
+                if j == 5:
+                    zfcYer2.append(data[i][j])
+
+
 plt.errorbar(fcX, fcY, fcYer)
 plt.errorbar(zfcX, zfcY, zfcYer)
 plt.errorbar(fcX1, fcY1, fcYer1)
 plt.errorbar(zfcX1, zfcY1, zfcYer1)
-plt.legend(["old_FC", "old_ZFC", "FC", "ZFC"])
+plt.errorbar(fcX2, fcY2, fcYer2)
+plt.errorbar(zfcX2, zfcY2, zfcYer2)
+plt.legend(["cubic_FC", "cubic_ZFC", "hex_FC", "hex_ZFC", "rnd_FC", "rnd_ZFC"])
 plt.xlabel(r"$T, K$")
 plt.ylabel(r"$M, A/m^2$")
 plt.title(r"$T_{shell} = 5 нм, k_{A} = 30k$")

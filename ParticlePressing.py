@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-filename = 'txtdata/initial positions.txt'
+filename = 'txtdata/05.05.22_random_initial_positions.txt'
 data = np.loadtxt(filename, delimiter=' ')
 
 X = []
@@ -17,7 +17,7 @@ for i in range(len(data)):
             else:
                 Z.append(data[i][j])
 
-filename = 'txtdata/pressing positions.txt'
+filename = 'txtdata/05.05.22_random_pressed_positions.txt'
 data = np.loadtxt(filename, delimiter=' ')
 
 Xp = []
@@ -45,6 +45,20 @@ Zmin = np.array([[min(Zp) + radius for i in range(0, 10)] for j in range(0, 10)]
 x_range = np.linspace(min(Xp), max(Xp), 10)
 y_range = np.linspace(min(Yp), max(Yp), 10)
 z_range = np.linspace(min(Zp), max(Zp), 10)
+
+cntr = 0
+for i in range(len(Xp)):
+    if min(Xp)+radius < Xp[i] < max(Xp)-radius and min(Yp)+radius < Yp[i] < max(Yp)-radius and min(Zp)+radius < Zp[i] < max(Zp)-radius:
+        cntr += 1
+Xside = max(Xp) - min(Xp) - 2 * radius
+Yside = max(Yp) - min(Yp) - 2 * radius
+Zside = max(Zp) - min(Zp) - 2 * radius
+# print(Xside)
+# print(Yside)
+# print(Zside)
+print(cntr)
+print(Xside * Yside * Zside)
+print(cntr / Xside * Yside * Zside)
 
 ax = plt.axes(projection="3d")
 
