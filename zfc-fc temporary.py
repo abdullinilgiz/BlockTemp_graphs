@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-filename = '17.09.21_FC.txt'
+filename = 'txtdata/17.09.21_FC.txt'
 data = np.loadtxt(filename, delimiter=' ')
 
 fcX = []
@@ -16,7 +16,7 @@ for i in range(len(data)):
             if j == 1:
                 fcY.append(data[i][j])
 
-filename = '17.09.21_ZFC.txt'
+filename = 'txtdata/17.09.21_ZFC.txt'
 data = np.loadtxt(filename, delimiter=' ')
 
 zfcX = []
@@ -30,9 +30,10 @@ for i in range(len(data)):
         else:
             if j == 1:
                 zfcY.append(data[i][j])
+
 plt.errorbar(fcX, fcY)
 plt.errorbar(zfcX, zfcY)
 plt.xlabel(r"$T, K$")
-plt.ylabel(r"$M, A/m^2$")
+plt.ylabel(r"$M, A \cdot m^2$")
 plt.title(r"$T_{shell} = 5 нм$")
 plt.show()

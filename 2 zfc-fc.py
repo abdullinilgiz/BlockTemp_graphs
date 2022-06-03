@@ -79,7 +79,7 @@ plt.errorbar(fcX1, fcY1, fcYer1)
 plt.errorbar(zfcX1, zfcY1, zfcYer1)
 plt.legend(["old_FC", "old_ZFC", "FC", "ZFC"])
 plt.xlabel(r"$T, K$")
-plt.ylabel(r"$M, A/m^2$")
+plt.ylabel(r"$M, A \cdot m^2$")
 plt.title(r"$T_{shell} = 5 нм, k_{A} = 30k$")
 plt.show()
 
