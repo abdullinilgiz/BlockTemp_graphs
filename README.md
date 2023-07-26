@@ -5,10 +5,13 @@
 ```
 https://drive.google.com/file/d/1l4FwXs-kWLpmR9BZCDY4pOj-TM4fzJc-/view?usp=sharing
 ```
-
+Данные были получены с импользованием кода из репозитория:
+```
+https://github.com/abdullinilgiz/BlockTemp.git
+```
 Примеры данных вы можете найти в папках ```longcalc``` и ```txtdata```
 
-По любым вопросам можете обращаться на данную почту:
+Мои контакты:
 ```
 abdullinilr@gmail.com
 ```
